@@ -1,0 +1,246 @@
+﻿@{
+    ViewData["Title"] = "Explore";
+}
+@model NationalParks.Models.Parks
+
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Explore Universities</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="~/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/css/da-slider.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <!-- Font Awesome -->
+    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+   
+   
+    <div id="#top"></div>
+
+    <section class="sub-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div><!-- END container -->
+    </section>
+    <!--  -->
+    <section id="model" class="page-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="heading text-center">
+                    <!-- Heading -->
+                    <br><br><br>
+                    <p><input type="text" style=" border-radius: 20px; text-align:left;width:350px;" placeholder="Florida,Ohio,Colorado..">		</p>
+                    <button class="btn btn-danger btn" style="border- radius : 20 px" type="button">Search</button>
+                </div>
+                <div class="col-sm-12">
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--/.container-->
+    </section>
+    <section class="page-section>
+        <div class="container">
+        </div>
+    </section>
+    <section id="plans" class="page-section">
+        <div class="container">
+            <div class="heading text-center">
+                <!-- Heading -->
+                <h2>Colleges</h2>
+                <p>Click on respective college details to know more about the departments and degrees offered by the university</p>
+            </div>
+            <div class="row flat">
+                @foreach (var item in Model.results)
+                {
+
+                    <div class="col-lg-3 col-md-3 col-xs-12">
+                        <ul class="plan plan2 featured">
+
+                            <li class="uni-name"> @Html.DisplayFor(modelItem => item.schoolname) </li>
+                            <center>
+                                <p> <strong> City</strong>  @Html.DisplayFor(modelItem => item.schoolcity)<br> <strong> State </strong>@Html.DisplayFor(modelItem => item.schoolstate)</p>
+
+                            
+                          <a class="btn btn-danger btn-lg;scroll-link" asp-area="" asp-action="explore">Details</a>
+                            </center>
+                        </ul>
+                    </div>
+
+
+
+
+                }
+            </div>
+            </div>
+    </section>
+    <section id="#uni1" STYLE="display:none">
+        <header class="align-center">
+            <br><br> <br>
+            <center><h2 Style="color:rgb(94.12%,42.35%,0%)">University of South Florida</h2></center>
+            <br>
+            <center><strong><h4>Departments and degrees offered by the Institution </h4></strong></center>
+        </header>
+        <h4></h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <center>
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th><center>Degrees Awarded</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Computer Engineering.</td><td>Bachelors</td> <td>Masters</td></tr>
+                    <tr><td>Electrical and Electronics and Communications Engineering</td><td>Masters</td><td>Post graduate</td></tr>
+                    <tr><td>Computer Systems Analysis</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Biomedical/Medical Engineering</td><td>Bachelors</td><td>Masters</td></tr>
+                    <tr><td>Teacher Education and Professional Development, Specific Levels and Methods</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Allied Health Diagnostic, Intervention, and Treatment Professions</td><td>Bachelors</td><td>-</td></tr>
+                </tbody>
+                </center>
+            </table>
+        </div>
+    </section>
+    <section id="#uni2" STYLE="display:none">
+        <header class="align-center">
+            <br><br> <br>
+            <center><h2 Style="color:rgb(94.12%,42.35%,0%)">University of Memphis</h2></center>
+            <br>
+            <center><strong><h4>Departments and degrees offered by the Institution </h4></strong></center>
+        </header>
+        <h4></h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <center>
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th><center>Degrees Awarded</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Computer Engineering</td><td>Bachelors</td> <td>Masters</td></tr>
+                    <tr><td>Electrical and Electronics and Communications Engineering</td><td>Masters</td><td>Post graduate</td></tr>
+                    <tr><td>Computer Systems Analysis</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Biomedical/Medical Engineering</td><td>Bachelors</td><td>Masters</td></tr>
+                    <tr><td>Teacher Education and Professional Development, Specific Levels and Methods</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Allied Health Diagnostic, Intervention, and Treatment Professions</td><td>Bachelors</td><td>-</td></tr>
+                </tbody>
+                </center>
+            </table>
+        </div>
+    </section>
+    <section id="#uni3" STYLE="display:none" class="scroll-link">
+        <header class="align-center">
+            <br><br> <br>
+            <center><h2 Style="color:rgb(94.12%,42.35%,0%)">The Ohio State University</h2></center>
+            <br>
+            <center><strong><h4>Departments and degrees offered by the Institution </h4></strong></center>
+        </header>
+        <h4></h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <center>
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th><center>Degrees Awarded</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Computer Engineering</td><td>Bachelors</td> <td>Masters</td></tr>
+                    <tr><td>Electrical and Electronics and Communications Engineering</td><td>Masters</td><td>Post graduate</td></tr>
+                    <tr><td>Computer Systems Analysis</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Biomedical/Medical Engineering</td><td>Bachelors</td><td>Masters</td></tr>
+                    <tr><td>Teacher Education and Professional Development, Specific Levels and Methods</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Allied Health Diagnostic, Intervention, and Treatment Professions</td><td>Bachelors</td><td>-</td></tr>
+                </tbody>
+                </center>
+            </table>
+        </div>
+    </section>
+    <section id="#uni4" STYLE="display:none">
+        <header class="align-center">
+            <br><br> <br>
+            <center><h2 Style="color:rgb(94.12%,42.35%,0%)">University of Colorado</h2></center>
+            <br>
+            <center><strong><h4>Departments and degrees offered by the Institution </h4></strong></center>
+        </header>
+        <h4></h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <center>
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th><center>Degrees Awarded</center></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Computer Engineering</td><td>Bachelors</td> <td>Masters</td></tr>
+                    <tr><td>Electrical and Electronics and Communications Engineering</td><td>Masters</td><td>Post graduate</td></tr>
+                    <tr><td>Computer Systems Analysis</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Biomedical/Medical Engineering</td><td>Bachelors</td><td>Masters</td></tr>
+                    <tr><td>Teacher Education and Professional Development, Specific Levels and Methods</td><td>Masters</td><td>-</td></tr>
+                    <tr><td>Allied Health Diagnostic, Intervention, and Treatment Professions</td><td>Bachelors</td><td>-</td></tr>
+                </tbody>
+                </center>
+            </table>
+        </div>
+    </section>
+    <!--/#north-america-->
+   
+    <!--/.page-section-->
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+    <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+    <script src="~/js/modernizr-latest.js"></script>
+    <script src="~/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="~/js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="~/js/jquery.nav.js" type="text/javascript"></script>
+    <script src="~/js/jquery.cslider.js" type="text/javascript"></script>
+    <script src="~/js/custom.js" type="text/javascript"></script>
+    <SCRIPT>
+        var oldEelementId;
+        function ShowAndHide(idn) {
+            if (window.oldEelementId !== undefined && window.oldEelementId !== idn) {
+                var oldDetails = document.getElementById(window.oldEelementId);
+                oldDetails.style.display = 'none';
+            }
+            var x = document.getElementById(idn);
+            x.style.display = 'block';
+            x.scrollIntoView();
+            window.oldEelementId = idn;
+        }
+    </SCRIPT>
+</body>
+</html>
